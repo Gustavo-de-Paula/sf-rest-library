@@ -40,7 +40,7 @@ public class Book {
     private String bookName;
 
     @NotNull
-    private BookGenre bookgenre;
+    private BookGenre bookGenre;
 
     @Version
     private Integer bookVersion;
