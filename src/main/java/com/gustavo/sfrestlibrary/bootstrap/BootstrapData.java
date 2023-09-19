@@ -6,6 +6,7 @@ import com.gustavo.sfrestlibrary.repositories.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -16,6 +17,7 @@ public class BootstrapData implements CommandLineRunner {
     private final BookRepository bookRepository;
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
         loadBookData();
     }
