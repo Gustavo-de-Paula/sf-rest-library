@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public interface BookService {
     BookDTO createBook(BookDTO book);
-    Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookgenre, Integer bookVersion,
+    Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookGenre, Integer bookVersion,
                                Integer pageNumber, Integer pageSize);
     Optional<BookDTO> getBookById(UUID bookId);
     Optional<BookDTO> updateBookById(UUID bookId, BookDTO book);
