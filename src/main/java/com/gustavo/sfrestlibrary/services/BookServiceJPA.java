@@ -35,7 +35,7 @@ public class BookServiceJPA implements BookService{
     }
 
     @Override
-    public Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookGenre, Integer bookVersion,
+    public Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookGenre,
                                       Integer pageNumber, Integer pageSize) {
         Page<Book> bookPage;
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -78,7 +78,7 @@ public class BookServiceJPA implements BookService{
         bookRepository.findById(bookId).ifPresentOrElse(foundBook -> {
             foundBook.setBookIsbn(book.getBookIsbn());
             foundBook.setBookName(book.getBookName());
-            foundBook.setBookgenre(book.getBookGenre());
+            foundBook.setBookGenre(book.getBookGenre());
             foundBook.setBookVersion(book.getBookVersion());
             foundBook.setBookUpdateDate(LocalDateTime.now());
 
@@ -100,7 +100,7 @@ public class BookServiceJPA implements BookService{
             if (StringUtils.hasText(book.getBookName()))
                 foundBook.setBookName(book.getBookName());
             if (book.getBookGenre() != null)
-                foundBook.setBookgenre(book.getBookGenre());
+                foundBook.setBookGenre(book.getBookGenre());
             if (book.getBookVersion() != null)
                 foundBook.setBookVersion(book.getBookVersion());
             foundBook.setBookUpdateDate(LocalDateTime.now());

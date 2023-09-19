@@ -72,7 +72,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookgenre, Integer bookVersion,
+    public Page<BookDTO> listAllBooks(Long bookIsbn, String bookName, BookGenre bookgenre,
                                       Integer pageNumber, Integer pageSize) {
         return new PageImpl<>(new ArrayList<>(bookMap.values()));
     }
