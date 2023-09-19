@@ -31,8 +31,7 @@ public class Book {
 
     @NotNull
     @NotBlank
-    @Size(min = 13, max = 13)
-    private int bookIsbn;
+    private Long bookIsbn;
 
     @NotNull
     @NotBlank

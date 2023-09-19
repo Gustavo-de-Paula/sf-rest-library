@@ -10,7 +10,7 @@ import java.util.UUID;
 @Builder
 public class BookDTO {
     private UUID bookId;
-    private int bookIsbn;
+    private Long bookIsbn;
     private String bookName;
     private BookGenre bookGenre;
     private Integer bookVersion;
