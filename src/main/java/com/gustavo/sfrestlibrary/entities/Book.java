@@ -1,5 +1,6 @@
 package com.gustavo.sfrestlibrary.entities;
 
+import com.gustavo.sfrestlibrary.model.BookGenre;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -28,8 +29,10 @@ public class Book {
     @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private UUID bookId;
 
-    @Version
-    private Integer bookVersion;
+    @NotNull
+    @NotBlank
+    @Size(min = 13, max = 13)
+    private int bookIsbn;
 
     @NotNull
     @NotBlank
@@ -38,9 +41,10 @@ public class Book {
     private String bookName;
 
     @NotNull
-    @NotBlank
-    @Size(min = 13, max = 13)
-    private int bookIsbn;
+    private BookGenre bookgenre;
+
+    @Version
+    private Integer bookVersion;
 
     @CreationTimestamp
     @Column(updatable = false)
