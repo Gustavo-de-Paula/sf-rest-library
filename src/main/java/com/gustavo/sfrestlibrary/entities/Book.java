@@ -30,7 +30,6 @@ public class Book {
     private UUID bookId;
 
     @NotNull
-    @NotBlank
     private Long bookIsbn;
 
     @NotNull
