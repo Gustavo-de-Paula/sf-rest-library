@@ -163,7 +163,7 @@
 				<artifactId>springdoc-openapi-maven-plugin</artifactId>
 				<version>1.4</version>
 				<configuration>
-					<apiDocsUrl>http://localhost:8085/v3/api-docs</apiDocsUrl>
+					<apiDocsUrl>http://localhost:8085/v3/api-docs.yaml</apiDocsUrl>
 					<outputFileName>openapi.yml</outputFileName>
 				</configuration>
 				<executions>
