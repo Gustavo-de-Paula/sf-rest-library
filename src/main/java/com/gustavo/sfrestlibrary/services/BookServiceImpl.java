@@ -1,5 +1,6 @@
 package com.gustavo.sfrestlibrary.services;
 
+import com.gustavo.sfrestlibrary.entities.Book;
 import com.gustavo.sfrestlibrary.model.BookDTO;
 import com.gustavo.sfrestlibrary.model.BookGenre;
 import lombok.extern.slf4j.Slf4j;
@@ -49,9 +50,19 @@ public class BookServiceImpl implements BookService {
                 .bookUpdateDate(LocalDateTime.now())
                 .build();
 
+        BookDTO book4 = BookDTO.builder()
+                .bookIsbn(4444444444444L)
+                .bookName("Lord of the Rings: The Two Towers")
+                .bookGenre(BookGenre.FANTASY)
+                .bookVersion(4)
+                .bookCreationDate(LocalDateTime.now())
+                .bookUpdateDate(LocalDateTime.now())
+                .build();
+
         bookMap.put(book1.getBookId(), book1);
         bookMap.put(book2.getBookId(), book2);
         bookMap.put(book3.getBookId(), book3);
+        bookMap.put(book3.getBookId(), book4);
     }
 
     @Override

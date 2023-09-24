@@ -51,7 +51,16 @@ public class BootstrapData implements CommandLineRunner {
                     .bookUpdateDate(LocalDateTime.now())
                     .build();
 
-            bookRepository.saveAll(Arrays.asList(book1, book2, book3));
+            Book book4 = Book.builder()
+                    .bookIsbn(4444444444444L)
+                    .bookName("Lord of the Rings: The Two Towers")
+                    .bookGenre(BookGenre.FANTASY)
+                    .bookVersion(4)
+                    .bookCreationDate(LocalDateTime.now())
+                    .bookUpdateDate(LocalDateTime.now())
+                    .build();
+
+            bookRepository.saveAll(Arrays.asList(book1, book2, book3, book4));
         }
     }
 }
