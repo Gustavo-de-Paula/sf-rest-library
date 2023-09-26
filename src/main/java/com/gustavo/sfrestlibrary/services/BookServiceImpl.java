@@ -17,54 +17,6 @@ import java.util.*;
 public class BookServiceImpl implements BookService {
     private Map<UUID, BookDTO> bookMap;
 
-    public BookServiceImpl() {
-        this.bookMap = new HashMap<>();
-
-        BookDTO book1 = BookDTO.builder()
-                .bookId(UUID.randomUUID())
-                .bookIsbn(1111111111111L)
-                .bookName("Neuromancer")
-                .bookGenre(BookGenre.SCIFI)
-                .bookVersion(1)
-                .bookCreationDate(LocalDateTime.now())
-                .bookUpdateDate(LocalDateTime.now())
-                .build();
-
-        BookDTO book2 = BookDTO.builder()
-                .bookId(UUID.randomUUID())
-                .bookIsbn(2222222222222L)
-                .bookName("The Color Out of Space")
-                .bookGenre(BookGenre.HORROR)
-                .bookVersion(2)
-                .bookCreationDate(LocalDateTime.now())
-                .bookUpdateDate(LocalDateTime.now())
-                .build();
-
-        BookDTO book3 = BookDTO.builder()
-                .bookId(UUID.randomUUID())
-                .bookIsbn(3333333333333L)
-                .bookName("Lord of the Rings: The Two Towers")
-                .bookGenre(BookGenre.FANTASY)
-                .bookVersion(3)
-                .bookCreationDate(LocalDateTime.now())
-                .bookUpdateDate(LocalDateTime.now())
-                .build();
-
-        BookDTO book4 = BookDTO.builder()
-                .bookIsbn(4444444444444L)
-                .bookName("Lord of the Rings: The Two Towers")
-                .bookGenre(BookGenre.FANTASY)
-                .bookVersion(4)
-                .bookCreationDate(LocalDateTime.now())
-                .bookUpdateDate(LocalDateTime.now())
-                .build();
-
-        bookMap.put(book1.getBookId(), book1);
-        bookMap.put(book2.getBookId(), book2);
-        bookMap.put(book3.getBookId(), book3);
-        bookMap.put(book3.getBookId(), book4);
-    }
-
     @Override
     public BookDTO createBook(BookDTO book) {
         BookDTO savedBook = BookDTO.builder()
