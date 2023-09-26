@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
@@ -44,7 +45,7 @@ public class BootstrapData implements CommandLineRunner {
 
             Book book3 = Book.builder()
                     .bookIsbn(3333333333333L)
-                    .bookName("Lord of the Rings: The Two Towers")
+                    .bookName("Lord of the Rings: The Fellowship of the Ring")
                     .bookGenre(BookGenre.FANTASY)
                     .bookVersion(3)
                     .bookCreationDate(LocalDateTime.now())
@@ -60,7 +61,16 @@ public class BootstrapData implements CommandLineRunner {
                     .bookUpdateDate(LocalDateTime.now())
                     .build();
 
-            bookRepository.saveAll(Arrays.asList(book1, book2, book3, book4));
+            Book book5 = Book.builder()
+                    .bookIsbn(5555555555555L)
+                    .bookName("Lord of the Rings: Return of the King")
+                    .bookGenre(BookGenre.FANTASY)
+                    .bookVersion(5)
+                    .bookCreationDate(LocalDateTime.now())
+                    .bookUpdateDate(LocalDateTime.now())
+                    .build();
+
+            bookRepository.saveAll(Arrays.asList(book1, book2, book3, book4, book5));
         }
     }
 }
