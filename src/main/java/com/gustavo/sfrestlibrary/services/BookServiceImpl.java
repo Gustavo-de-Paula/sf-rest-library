@@ -6,7 +6,6 @@ import com.gustavo.sfrestlibrary.model.BookDTO;
 import com.gustavo.sfrestlibrary.model.BookGenre;
 import com.gustavo.sfrestlibrary.repositories.BookRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

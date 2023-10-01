@@ -5,8 +5,6 @@ import com.gustavo.sfrestlibrary.model.BookDTO;
 import com.gustavo.sfrestlibrary.model.BookGenre;
 import com.gustavo.sfrestlibrary.services.BookService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
