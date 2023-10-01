@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@Slf4j
 @RestController
 @RequiredArgsConstructor
 public class BookController {
