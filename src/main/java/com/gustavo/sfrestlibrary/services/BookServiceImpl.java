@@ -20,7 +20,6 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Service
-@Primary
 @RequiredArgsConstructor
 public class BookServiceImpl implements BookService{
     private final BookRepository bookRepository;
