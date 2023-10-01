@@ -41,7 +41,6 @@ public class Book {
     @NotNull
     private BookGenre bookGenre;
 
-    @Version
     private Integer bookVersion;
 
     @CreationTimestamp
